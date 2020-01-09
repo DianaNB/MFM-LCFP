@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+<h2 th:replace="fragments :: title"></h2>
+<h1 th:text="${title}">Default Title</h1>
+
+<div class="container border">
+    <h2 th:text="${heading}">Default Heading</h2>
+    <i th:unless="${users} and ${users.size()}">No users yet :( </i>
+
+    <div>
+        <ul>
+            <li th:each="user : ${users}">
+                <span class="post-text" th:text="${user.username}"></span></li>
+        </ul>
+    </div>
+</div>
+<style>
+    h2 {
+        font-family: 'arial black', cursive;
+        text-align: center;
+    }
+   .post-text {
+   color: white;
+   font-size: 25px;
+   }
+   ul{
+   list-style-type:square;
+   font-size:30px;
+   color:deeppink;
+   margin-left:40px;
+   }
+
+
+</style>
+<footer th:replace="fragments :: footer"></footer>
+</html>
+
