@@ -55,10 +55,10 @@ public class PostController extends MainController {
         return "posts/view";
     }
 
-//    @RequestMapping(value = "posts-in-category/{category}", method = RequestMethod.GET)
-//    public String listByCategory(Model model, @PathVariable String category) {
-//        model.addAttribute("post", StreamUtils.createStreamFromIterator(postDao.findAll().iterator()).filter(a -> category.equals(a.getSnake().getCategory())).iterator());
-//        model.addAttribute("heading", "Posts in Category: " + category);
-//        return "posts/posts-in-category";
-//    }
+    @RequestMapping(value = "posts-in-category/{category}", method = RequestMethod.GET)
+    public String listByCategory(Model model, @PathVariable String category) {
+        model.addAttribute("post", StreamUtils.createStreamFromIterator(postDao.findAll().iterator()).filter(a -> category.equals(a.getGenre().getCategory())).iterator());
+        model.addAttribute("heading", "Posts in Category: " + category);
+        return "posts/posts-in-category";
+    }
 }

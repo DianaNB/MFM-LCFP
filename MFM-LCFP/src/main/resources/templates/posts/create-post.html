@@ -45,14 +45,14 @@
 
             <!--    </div>-->
 
-            <!--    <div class="form-group">-->
-            <!--        <label th:for="snake">Category:</label>-->
-            <!--        <select class="enum"th:field="*{snake}">-->
-            <!--            <option th:each="snake : ${ T(com.launchcode.adrienne.FinalProjectTest.models.Snake).values()}"-->
-            <!--                    th:text="${snake.name}"-->
-            <!--                    th:value="${snake}"></option>-->
-            <!--        </select>-->
-            <!--    </div>-->
+                <div class="form-group">
+                    <label th:for="genre">Category:</label>
+                    <select class="enum"th:field="*{genre}">
+                        <option th:each="genre: ${ T(MFM.LCFP.models.Genre).values()}"
+                                th:text="${genre.name}"
+                                th:value="${genre}"></option>
+                    </select>
+                </div>
 
             <div class="form-group">
                 <label th:for="description">Description:</label>

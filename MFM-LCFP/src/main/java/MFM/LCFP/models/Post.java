@@ -21,23 +21,19 @@ public class Post {
     @Lob
     private String description;
 
-//    @NotBlank(message = "Please enter male or female")
-//    private String sex;
-
     private int age;
 
-//    private Snake snake;
-
+    private Genre genre;
+    
     public Post() {
     }
 
-    public Post(int id, String name, String title, String description, int age) {
+    public Post(int id, String name, String title, String description, String genre, int age) {
 
         this.id = id;
         this.name = name;
         this.title = title;
         this.description = description;
-//        this.sex = sex;
         this.age = age;
     }
 
@@ -65,14 +61,6 @@ public class Post {
         this.description = description;
     }
 
-//    public String getSex() {
-//        return sex;
-//    }
-//
-//    public void setSex(String sex) {
-//        this.sex = sex;
-//    }
-
     public int getAge() {
         return age;
     }
@@ -89,13 +77,11 @@ public class Post {
         this.title = title;
     }
 
-//    public Snake getSnake() {
-//        return snake;
-//    }
-//
-//    public void setSnake(Snake snake) {
-//        this.snake = snake;
-//    }
-
+    public Genre getGenre() {
+        return genre;
+    }
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
 
 }
