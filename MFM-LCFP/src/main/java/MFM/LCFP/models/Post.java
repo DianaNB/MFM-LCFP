@@ -24,7 +24,7 @@ public class Post {
     private int age;
 
     private Genre genre;
-    
+
     public Post() {
     }
 
